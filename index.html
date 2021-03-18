@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>ASYNC / AWAIT</title>
+        <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+        <style>
+            .be-bold {
+                font-weight: 600;
+            }
+        </style>
+    </head>
+    
+    <body>
+        <div id="app" class="container-fluid">
+            <hr>
+            <div class="card">
+                <div class="card-header">
+                    <h2>PAYS</h2>
+                </div>
+                <div id="pays" class="card-body">Waiting...</div>
+            </div>
+            <hr>
+            <div class="card">
+                <div class="card-header">
+                    <h2>CAPITALE</h2>
+                </div>
+                <div id="capital" class="card-body">Waiting...</div>
+            </div>
+            <hr>
+            <div class="card">
+                <div class="card-header">
+                    <h2>POPULATION</h2>
+                </div>
+                <div id="population" class="card-body">Waiting...</div>
+            </div>
+            <hr>
+            <div class="card">
+                <div class="card-header">
+                    <h2>CODE CIOC</h2>
+                </div>
+                <div id="code" class="card-body">Waiting...</div>
+            </div>
+            <hr>
+            <button id="button">Fetch data</button>
+        </div>
+        <script src="script.js"></script>
+        <script src="main.js"></script>
+        <script>
+            const button = document.querySelector('#button');
+            button.addEventListener('click', (e) => fetchAndDisplayData(e));
+        </script>
+        
+<p>
+    We are using Node.js <span id="node-version"></span>,
+    Chromium <span id="chrome-version"></span>,
+    and Electron <span id="electron-version"></span>.
+</p>
+        </body>
+</html>
+
+
